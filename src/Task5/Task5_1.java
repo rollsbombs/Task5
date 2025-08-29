@@ -25,12 +25,16 @@ public class Task5_1 {
                 Date begindate = calendar.getTime();
                 System.out.println("Дата после сдвига на начало года: " + sdf.format(begindate));
                 calendar.setTime(date1);
-                int workdays = 10;
-                while (workdays > 0) {
-                    calendar.add(GregorianCalendar.DAY_OF_MONTH, 1;
-
+                int workDaysToAdd = 10;
+                while (workDaysToAdd > 0) {
+                    calendar.add(GregorianCalendar.DAY_OF_MONTH, 1);
+                    int dayOfWeek = calendar.get(GregorianCalendar.DAY_OF_WEEK);
+                    if (dayOfWeek != GregorianCalendar.SATURDAY && dayOfWeek != GregorianCalendar.SUNDAY) {
+                        workDaysToAdd--;
+                    }
                 }
-                }
+                Date date10 = calendar.getTime();
+                System.out.println("Дата после увеличения на 10 рабочих дней: " + sdf.format(date10));
             } catch (ParseException e) {
 
             }
