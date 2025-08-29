@@ -35,8 +35,21 @@ public class Task5_1 {
                 }
                 Date date10 = calendar.getTime();
                 System.out.println("Дата после увеличения на 10 рабочих дней: " + sdf.format(date10));
+                System.out.println("Введите вторую дату в формате дд.мм.гггг");
+                String dateStr2 = scanner.nextLine();
+                Date date2 = sdf.parse(dateStr2);
+                calendar.setTime(date1);
+                int workDays = 0;
+                while (!calendar.getTime().after(date2)) {
+                    int dayOfWeek = calendar.get(GregorianCalendar.DAY_OF_WEEK);
+                    if (dayOfWeek != GregorianCalendar.SATURDAY && dayOfWeek != GregorianCalendar.SUNDAY) {
+                        workDays++;
+                    }
+                    calendar.add(GregorianCalendar.DAY_OF_MONTH, 1);
+                }
+                System.out.println("Количество рабочих дней между введёнными датами: " + sdf.format(workDays));
             } catch (ParseException e) {
-
+                System.out.println("Ошибка: Неверный формат даты. Используйте формат 'дд.мм.гггг'");
             }
         }
     }
