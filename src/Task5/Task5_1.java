@@ -37,7 +37,7 @@ public class Task5_1 {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
 
         try {
-            System.out.println("Введите дату в формате dd.MM.yyyy:");
+            System.out.println("Введите дату в формате дд.мм.гггг:");
             String dateStr1 = scanner.nextLine();
             Date date1 = dateFormat.parse(dateStr1);
 
@@ -65,7 +65,7 @@ public class Task5_1 {
             Date date10 = calendar.getTime();
             System.out.println("Дата после увеличения на 10 рабочих дней: " + dateFormat.format(date10));
 
-            System.out.println("Введите вторую дату в формате dd.MM.yyyy:");
+            System.out.println("Введите вторую дату в формате дд.мм.гггг:");
             String dateStr2 = scanner.nextLine();
             Date date2 = dateFormat.parse(dateStr2);
 
