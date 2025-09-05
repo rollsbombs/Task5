@@ -38,7 +38,7 @@ public class Task5_1 {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
 
         try {
-            System.out.println("Введите дату в формате дд.мм.гггг:");
+            System.out.println("Введите дату в формате дд.мм.гггг: ");
             String dateStr1 = scanner.nextLine();
             Date date1 = dateFormat.parse(dateStr1);
 
