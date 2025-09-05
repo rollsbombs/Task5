@@ -66,7 +66,7 @@ public class Task5_1 {
             Date date10 = calendar.getTime();
             System.out.println("Дата после увеличения на 10 рабочих дней: " + dateFormat.format(date10));
 
-            System.out.println("Введите вторую дату в формате дд.мм.гггг:");
+            System.out.println("Введите вторую дату в формате дд.мм.гггг: ");
             String dateStr2 = scanner.nextLine();
             Date date2 = dateFormat.parse(dateStr2);
 
