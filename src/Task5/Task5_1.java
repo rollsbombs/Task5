@@ -21,8 +21,9 @@ public class Task5_1 {
 
         int workDays = 0;
         Calendar current = (Calendar) startCal.clone();
+        current.add(Calendar.DAY_OF_MONTH, 1);
 
-        while (current.before(endCal) || current.equals(endCal)) {
+        while (!current.after(endCal)) {
             int dayOfWeek = current.get(Calendar.DAY_OF_WEEK);
             if (dayOfWeek != Calendar.SATURDAY && dayOfWeek != Calendar.SUNDAY) {
                 workDays++;
